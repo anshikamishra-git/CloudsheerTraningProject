@@ -1,0 +1,37 @@
+<!-- <template>
+    <lightning-modal-header label="Full Screen Component"></lightning-modal-header>
+    <lightning-modal-body>
+        This is my full screen component content.
+    </lightning-modal-body>
+    <lightning-modal-footer>
+        <lightning-button label="Close" onclick={handleClose}></lightning-button>
+    </lightning-modal-footer>
+</template> -->
+<template>
+    <!-- Button shown on record page -->
+    <template if:false={isOpen}>
+        <lightning-button
+            variant="brand"
+            label="Open"
+            onclick={handleOpen}>
+        </lightning-button>
+    </template>
+
+    <!-- Full screen overlay shown after clicking button -->
+    <template if:true={isOpen}>
+        <div class="fullscreen-overlay">
+            <div class="fullscreen-header">
+                <h2>Full Screen Component</h2>
+                <lightning-button-icon
+                    icon-name="utility:close"
+                    variant="bare"
+                    alternative-text="Close"
+                    onclick={handleClose}>
+                </lightning-button-icon>
+            </div>
+            <div class="fullscreen-body">
+                This is my full screen component content.
+            </div>
+        </div>
+    </template>
+</template>

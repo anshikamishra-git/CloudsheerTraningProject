@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Recruitment Filter Panel" icon-name="utility:filterList">
+        <div class="slds-var-p-around_medium">
+            <!-- Stage filter dropdown with accessibility label -->
+            <lightning-combobox
+                name="stageFilter"
+                label="Select Candidate Stage"
+                value={selectedStage}
+                options={stageOptions}
+                onchange={handleStageChange}>
+            </lightning-combobox>
+        </div>
+    </lightning-card>
+</template>

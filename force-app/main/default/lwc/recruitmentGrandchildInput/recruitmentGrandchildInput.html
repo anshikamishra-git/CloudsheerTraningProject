@@ -1,0 +1,13 @@
+<template>
+    <!-- SLDS Lightning Card styling ke sath -->
+    <lightning-card title="Grandchild: Candidate Feedback Note" icon-name="utility:edit">
+        <div class="slds-var-p-around_medium">
+            <!-- Proper label added for Accessibility (a11y) -->
+            <lightning-input 
+                label="Enter Candidate Feedback Note" 
+                value={candidateNote} 
+                onchange={handleInputChange}>
+            </lightning-input>
+        </div>
+    </lightning-card>
+</template>

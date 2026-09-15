@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Parent: Candidate Overview Container" icon-name="standard:user">
+        <!-- Wrapper div par 'oncandidatechange' listener lagaya gaya hai event capture karne ke liye -->
+        <div class="slds-var-p-around_medium" oncandidatechange={handleGrandchildCandidateChange}>
+            
+            <!-- Live update preview box -->
+            <div class="slds-box slds-theme_shade slds-var-m-bottom_medium">
+                <p><strong>Live Parent Preview Note:</strong> {currentCandidateNote}</p>
+            </div>
+
+            <!-- Child component nested, properties passed DOWN -->
+            <c-recruitment-child-card 
+                candidate-name={candidateName} 
+                candidate-note={currentCandidateNote}>
+            </c-recruitment-child-card>
+
+        </div>
+    </lightning-card>
+</template>

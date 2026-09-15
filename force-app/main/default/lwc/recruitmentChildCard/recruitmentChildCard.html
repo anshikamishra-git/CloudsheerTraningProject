@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Child: Candidate Details Wrapper" icon-name="standard:contact">
+        <div class="slds-var-p-around_medium">
+            <!-- Parent se aane wala Candidate Name display ho raha hai -->
+            <p class="slds-var-m-bottom_small"><strong>Candidate Name:</strong> {candidateName}</p>
+
+            <!-- Grandchild component nesting with Property Pass-Down -->
+            <c-recruitment-grandchild-input candidate-note={candidateNote}></c-recruitment-grandchild-input>
+        </div>
+    </lightning-card>
+</template>

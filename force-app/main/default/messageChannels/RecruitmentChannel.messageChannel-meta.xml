@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <!-- Channel ka label -->
+    <masterLabel>RecruitmentChannel</masterLabel>
+    
+    <!-- Exposed true hone se LWC components is channel ko import kar sakte hain -->
+    <isExposed>true</isExposed>
+    
+    <description>LMS channel filter data broadcast karne ke liye across unrelated components</description>
+    
+    <!-- Channel me send hone wala key payload field -->
+    <lightningMessageFields>
+        <fieldName>selectedStage</fieldName>
+        <description>Selected candidate recruitment stage (e.g., Applied, Screening, Interview, Offered)</description>
+    </lightningMessageFields>
+</LightningMessageChannel>
